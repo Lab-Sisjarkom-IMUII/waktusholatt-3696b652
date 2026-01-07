@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Islamic Modern Theme - Light Mode */
+    --background: 160 20% 98%;
+    --foreground: 160 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 15% 15%;
+
+    --primary: 172 66% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    --primary-soft: 172 45% 92%;
+    --primary-glow: 172 66% 65%;
+
+    --secondary: 43 96% 56%;
+    --secondary-foreground: 160 15% 15%;
+
+    --muted: 160 20% 95%;
+    --muted-foreground: 160 10% 45%;
+
+    --accent: 43 96% 56%;
+    --accent-foreground: 160 15% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 160 20% 90%;
+    --input: 160 20% 90%;
+    --ring: 172 66% 50%;
+
+    --radius: 1rem;
+    
+    /* Custom Islamic Theme Variables */
+    --gradient-primary: linear-gradient(135deg, hsl(172, 66%, 50%), hsl(172, 66%, 65%));
+    --gradient-accent: linear-gradient(135deg, hsl(43, 96%, 56%), hsl(38, 90%, 60%));
+    --gradient-bg: linear-gradient(180deg, hsl(160, 20%, 98%), hsl(172, 45%, 96%));
+    
+    --shadow-soft: 0 4px 20px -4px hsl(172 66% 50% / 0.1);
+    --shadow-glow: 0 0 40px hsl(172 66% 65% / 0.15);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 160 15% 12%;
+    --foreground: 160 10% 95%;
+
+    --card: 160 15% 15%;
+    --card-foreground: 160 10% 95%;
+
+    --popover: 160 15% 15%;
+    --popover-foreground: 160 10% 95%;
+
+    --primary: 172 66% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    --primary-soft: 172 45% 20%;
+    --primary-glow: 172 66% 65%;
+
+    --secondary: 43 96% 56%;
+    --secondary-foreground: 160 15% 12%;
+
+    --muted: 160 15% 20%;
+    --muted-foreground: 160 10% 65%;
+
+    --accent: 43 96% 56%;
+    --accent-foreground: 160 15% 12%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 160 15% 25%;
+    --input: 160 15% 25%;
+    --ring: 172 66% 50%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(172, 66%, 40%), hsl(172, 66%, 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(43, 96%, 46%), hsl(38, 90%, 50%));
+    --gradient-bg: linear-gradient(180deg, hsl(160, 15%, 12%), hsl(172, 25%, 15%));
+    
+    --shadow-soft: 0 4px 20px -4px hsl(172 66% 50% / 0.2);
+    --shadow-glow: 0 0 40px hsl(172 66% 65% / 0.25);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+    background: var(--gradient-bg);
+  }
+  
+  .font-arabic {
+    font-family: 'Amiri', serif;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+  
+  .hover-glow {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+  
+  .hover-scale {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.02);
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
