@@ -1,0 +1,11 @@
+{
+  "name": "waktusholatt",
+  "framework": "nextjs",
+  "language": "typescript",
+  "buildCommand": "npm run build",
+  "startCommand": "npm run dev",
+  "domain": "waktusholatt",
+  "email": "24523065@students.uii.ac.id",
+  "secretKey": "imuii_ebbc255798e7bb964628759fc4846b10dc746bb68f3eb56e768b7abb67125864",
+  "repoUrl": "https://github.com/Lab-Sisjarkom-IMUII/waktusholatt-3696b652.git"
+}

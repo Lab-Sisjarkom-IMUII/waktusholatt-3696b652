@@ -1,66 +1,71 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import './page.css';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="page-container">
+      <div className="page-wrapper">
+        <div className="page-content">
+          {/* IM-UII Header */}
+          <div className="page-header">
+            <h1 className="page-title">IM-UII</h1>
+            <p className="page-subtitle">Welcome to Your Project</p>
+          </div>
+
+          {/* Feature Cards */}
+          <div className="page-features">
+            <div className="page-card">
+              <div className="page-icon">🚀</div>
+              <h3 className="page-card-title">Fast Development</h3>
+              <p className="page-card-text">
+                Built with Next.js for optimal performance and exceptional developer experience
+              </p>
+            </div>
+            
+            <div className="page-card">
+              <div className="page-icon">🔧</div>
+              <h3 className="page-card-title">Easy Deployment</h3>
+              <p className="page-card-text">
+                Configured with IM-UII for seamless deployment workflow and automation
+              </p>
+            </div>
+            
+            <div className="page-card">
+              <div className="page-icon">⚡</div>
+              <h3 className="page-card-title">Modern Stack</h3>
+              <p className="page-card-text">
+                Powered by the latest React, TypeScript, and cutting-edge tooling
+              </p>
+            </div>
+          </div>
+
+          {/* Quick Start */}
+          <div className="page-quick-start">
+            <h3 className="page-quick-start-title">Quick Start</h3>
+            <div className="page-commands">
+              <div className="page-command-row">
+                <span className="page-command-label">Install</span>
+                <code className="page-command-code">npm install</code>
+              </div>
+              <div className="page-command-row">
+                <span className="page-command-label">Dev server</span>
+                <code className="page-command-code">npm run dev</code>
+              </div>
+              <div className="page-command-row">
+                <span className="page-command-label">Build</span>
+                <code className="page-command-code">npm run build</code>
+              </div>
+            </div>
+          </div>
+
+          {/* Footer */}
+          <div className="page-footer">
+            <p className="page-footer-text">
+              Powered by <span className="page-footer-brand">IM-UII</span>
+            </p>
+            <p className="page-footer-text">Deploy with confidence ✨</p>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
