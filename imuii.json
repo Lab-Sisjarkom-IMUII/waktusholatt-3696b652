@@ -2,7 +2,7 @@
   "name": "waktusholatt",
   "framework": "nextjs",
   "language": "typescript",
-  "buildCommand": "npm run build",
+  "buildCommand": "vite build",
   "startCommand": "npm run dev",
   "domain": "waktusholatt",
   "email": "24523065@students.uii.ac.id",
