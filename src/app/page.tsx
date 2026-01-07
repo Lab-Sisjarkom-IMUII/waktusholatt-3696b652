@@ -7,7 +7,7 @@ export default function Home() {
         <div className="page-content">
           {/* IM-UII Header */}
           <div className="page-header">
-            <h1 className="page-title">IM-UII</h1>
+            <h1 className="page-title">IM-UII Dzaki Putra Gunawan FSD</h1>
             <p className="page-subtitle">Welcome to Your Project</p>
           </div>
 
